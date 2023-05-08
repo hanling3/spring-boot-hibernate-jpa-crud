@@ -11,4 +11,12 @@ public class CruddemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CruddemoApplication.class, args);
 	}
+
+	@Bean
+	public CommandLineRunner commandLineRunner(String[] args) {
+		return runner -> {
+			System.out.println("Hello World");
+		};
+	}
+
 }
